@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pokemon_id: 1
+  party_member: MyText
+  item: MyText
+  move: MyText
+
+two:
+  pokemon_id: 1
+  party_member: MyText
+  item: MyText
+  move: MyText
