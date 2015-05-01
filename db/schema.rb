@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141222103644) do
+ActiveRecord::Schema.define(version: 20150501075846) do
 
   create_table "data", force: :cascade do |t|
     t.integer  "pokemon_id"
-    t.text     "party_member"
-    t.text     "item"
-    t.text     "move"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "poke_id"
+    t.integer  "p1"
+    t.integer  "p2"
+    t.integer  "p3"
+    t.integer  "p4"
+    t.integer  "p5"
+    t.integer  "m1"
+    t.integer  "m2"
+    t.integer  "m3"
+    t.integer  "m4"
   end
 
   create_table "items", force: :cascade do |t|
@@ -28,6 +35,17 @@ ActiveRecord::Schema.define(version: 20141222103644) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "move_items", force: :cascade do |t|
+    t.integer  "move_id"
+    t.integer  "item_id"
+    t.integer  "cooccur"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "move_items", ["item_id"], name: "index_move_items_on_item_id"
+  add_index "move_items", ["move_id"], name: "index_move_items_on_move_id"
 
   create_table "moves", force: :cascade do |t|
     t.string   "move_id"
@@ -43,6 +61,10 @@ ActiveRecord::Schema.define(version: 20141222103644) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "image"
   end
+
+  add_index "pokemons", ["name"], name: "index_pokemons_on_name"
+  add_index "pokemons", ["poke_id"], name: "index_pokemons_on_poke_id"
 
 end
