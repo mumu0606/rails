@@ -1,0 +1,19 @@
+<script type="text/javascript">
+$(function(){
+  $("#title").hover(
+      function(){$(this).attr("src","/images/メガルカリオ.jpg")},
+      function(){$(this).attr("src","/images/lucario.jpg")}
+    );
+});
+</script>
+
+<div class=" box shadow box-radius box-shadowOn" style="width:300px;">
+  <img src="/images/lucario.jpg" id="title" width="300" height="300">
+</div>
+<br>
+<!--ボタン設定-->
+<div class="row">
+  <div class="col-xs-6">
+    <input type="button" class="btn btn-primary btn-block" onclick="location.href='./register.html.erb'" value="TWitterでログインして開始">
+  </div>
+</div>

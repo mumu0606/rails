@@ -1,0 +1,30 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+$(function (){
+    var chart1 = new Highcharts.Chart({
+        chart: {
+            type: 'line',
+            renderTo: 'graph1'
+        },
+        title: {
+            text: 'レート遷移'
+        },
+        xAxis: {
+            
+        },
+        yAxis: {
+            title: {
+                text: 'レート'
+            }
+        },
+        series: [
+        {
+          data: <%= raw @rate_data.to_json %>
+        }
+        ],
+    });
+});
+</script>
+
+<!-- グラフ作成 -->
+<div id="graph1"></div>

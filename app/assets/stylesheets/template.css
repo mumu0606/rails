@@ -1,0 +1,81 @@
+/*========
+  アニメーション
+  ========*/
+
+/*テキストバウンド*/
+.type-textbound{
+  font-size:60px;
+  text-align:center;
+}
+
+.textbound1{-webkit-animation: bound .5s ease-in-out;}
+.textbound2{-webkit-animation: bound .7s ease-in-out;}
+.textbound3{-webkit-animation: bound .9s ease-in-out;}
+
+@-webkit-keyframes bound{
+  0% {transform: scale(0) translate(0,-500px);}
+  50% {transform: scaleX(2) translate(0,200px);}
+  70% {transform: scaleY(.5) translate(0,-100px);}
+  90% {transform: scaleX(1.5) translate(0,50px);}
+  100% {transform: scale(1) translate(0,0);}
+}
+
+
+body{
+  background-color:#98FB98;
+}
+
+input:hover {
+  background: #FAFAD2;
+}
+input{
+  width:120px;
+}
+tr:hover{
+  background: #FAFAD2;
+}
+.shadow{
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+}
+
+div.cell{
+  float:left;
+  margin:10px;
+}
+
+.box-radius {
+ border-radius: 14px;
+ overflow: hidden !important;
+}
+
+.box-shadowOn:hover{
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+li.hover{
+  fill: #98FB98;
+}
+
+.menu{
+  background: #303030;
+  position: fixed;
+  width:15%;
+  right:0px;
+  top:0px;
+  bottom:0;
+  min-height:600px;
+}
+
+#menu ul{
+  position: absolute;
+  top:170px;
+}
+
+/*
+.box {
+  position: relative;
+  overflow: visible !important;
+  transform: translate3d(1, 1, 1);
+}
+*/

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>ポケモン対戦支援サイト（仮）</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/application.css" rel="stylesheet">
+  <link href="css/template.css" rel="stylesheet">
+</head>
+<body bgcolor="blue">
+<%= render 'layouts/top' %>
+    <% if notice %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-info"><%= alert %></p>
+    <% end %>
+    <div class="container">
+      <div class="row">
+        <!--パーティー登録ここから-->
+        <div class="col-lg-10">
+          <%= yield %>
+        </div>
+        <!--パーティ登録ここまで-->
+        <!--メニューここから-->
+        <div class="col-lg-2">
+          <%= render 'layouts/sidebar' %>
+        </div>
+        <!--メニューここまで-->
+      </div>
+</body>
+</html>

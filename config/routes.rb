@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
   root "page#title"
   post "/" => "page#title"
-  get "page/title"
-  get "save/save_data"
-  post "save/save_data"
   resources :page do
-    get :autocomplete_pokemon_name, :on => :collection
-    get :autocomplete_item_name, :on => :collection
-    get :autocomplete_move_name, :on => :collection
+    collection do
+      get :autocomplete_pokemon_name
+      get :autocomplete_item_name
+      get :autocomplete_pokemon_name
+      get :autocomplete_move_name
+      get :title
+      get :login
+      get :register
+      get :analysis
+      get :rate_data
+      get :battle_data
+      post :register
+    end
   end
-  resources :save do 
-    get :autocomplete_pokemon_name, :on => :collection
-    get :autocomplete_item_name, :on => :collection
-    get :autocomplete_move_name, :on => :collection
+
+  resources :chat do
+    collection do
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
