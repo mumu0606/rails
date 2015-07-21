@@ -1,3 +1,9 @@
+{"move_id":23,"name":"ジオコントロール"}
+{"move_id":24,"name":"ばくおんぱ"}
+{"move_id":25,"name":"キングシールド"}
+{"move_id":26,"name":"フリーズドライ"}
+{"move_id":27,"name":"マジカルシャイン"}
+{"move_id":28,"name":"ムーンフォース"}
 {"move_id":29,"name":"じゃれつく"}
 {"move_id":30,"name":"グロウパンチ"}
 {"move_id":31,"name":"はたく"}
@@ -574,3 +580,4 @@
 {"move_id":603,"name":"めざめるパワー氷"}
 {"move_id":604,"name":"めざめるパワー龍"}
 {"move_id":605,"name":"めざめるパワー悪"}
+{"move_id":606,"name":"-"}
