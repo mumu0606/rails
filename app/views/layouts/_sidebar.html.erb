@@ -1,64 +1,33 @@
-<script type="text/javascript">
-$(function(){
-  $("#title").hover(
-      function(){$(this).attr("src","/images/title_on.png")},
-      function(){$(this).attr("src","/images/title_off.png")}
-    );
-  $("#party").hover(
-      function(){$(this).attr("src","/images/party_on.png")},
-      function(){$(this).attr("src","/images/party_off.png")}
-    );
-  $("#analysis").hover(
-      function(){$(this).attr("src","/images/analysis_on.png")},
-      function(){$(this).attr("src","/images/analysis_off.png")}
-    );
-  $("#rate_data").hover(
-      function(){$(this).attr("src","/images/rate_data_on.png")},
-      function(){$(this).attr("src","/images/rate_data_off.png")}
-    );
-  $("#battle_data").hover(
-      function(){$(this).attr("src","/images/battle_data_on.png")},
-      function(){$(this).attr("src","/images/battle_data_off.png")}
-    );
-});
-</script>
-
 <div class="menu" id="menu">
-  <p>メニュー</p>
     <ul>
-      <% if current_page?(title_page_index_path) %>
-        <li class="is-current"><%= link_to image_tag('/images/title_off.png',:size => "100x30",:id => "title"),title_page_index_path %></li>
+      <% if current_page?(top_page_index_path) or current_page?(root_path) %>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/top_page_on.png',:size => "180x36",:id => "title"),top_page_index_path %></li>
       <% else %>
-        <li><%= link_to image_tag('/images/title_off.png',:size => "100x30",:id => "title"),title_page_index_path %></li>
-      <% end %>
-      <% if current_page?(register_page_index_path) %>
-        <li class="is-current"><%= link_to image_tag('/images/party_off.png',:size => "100x30",:id => "party"),register_page_index_path %></li>
-      <% else %>
-        <li><%= link_to image_tag('/images/party_off.png',:size => "100x30",:id => "party"),register_page_index_path %></li>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/top_page_off.png',:size => "180x36",:id => "title"),top_page_index_path %></li>
       <% end %>
 
-      <% if current_page?(analysis_page_index_path) %>
-        <li class="is-current">
-          <%= link_to image_tag('/images/analysis_off.png',:size => "100x30",:id => "analysis"),analysis_page_index_path %>
-        </li>
+      <% if current_page?(analysis_index_path) %>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/analysis_page_on.png',:size => "180x36",:id => "title"),analysis_index_path %></li>
       <% else %>
-        <li><%= link_to image_tag('/images/analysis_off.png',:size => "100x30",:id => "analysis"),analysis_page_index_path %></li>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/analysis_page_off.png',:size => "180x36",:id => "title"),analysis_index_path %></li>
       <% end %>
 
-      <% if current_page?(rate_data_page_index_path) %>
-        <li class="is-current">
-          <%= link_to image_tag('/images/rate_data_off.png',:size => "100x30",:id => "rate_data"),rate_data_page_index_path %>
-        </li>
+      <% if current_page?(rate_data_path) %>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/rate_data_page_on.png',:size => "180x36",:id => "title"),rate_data_path %></li>
       <% else %>
-        <li><%= link_to image_tag('/images/rate_data_off.png',:size => "100x30",:id => "rate_data"),rate_data_page_index_path %></li>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/rate_data_page_off.png',:size => "180x36",:id => "title"),rate_data_path %></li>
       <% end %>
 
-      <% if current_page?(battle_data_page_index_path) %>
-        <li class="is-current">
-          <%= link_to image_tag('/images/battle_data_off.png',:size => "100x30",:id => "battle_data"),battle_data_page_index_path %>
-        </li>
+      <% if current_page?(register_index_path) %>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/party_page_on.png',:size => "180x36",:id => "title"),register_index_path %></li>
       <% else %>
-        <li><%= link_to image_tag('/images/battle_data_off.png',:size => "100x30",:id => "battle_data"),battle_data_page_index_path %></li>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/party_page_off.png',:size => "180x36",:id => "title"),register_index_path %></li>
+      <% end %>
+
+      <% if current_page?(battle_data_path) %>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/info_page_on.png',:size => "180x36",:id => "title"), battle_data_path %></li>
+      <% else %>
+        <li class="text-shadowOn"><%= link_to image_tag('/images/info_page_off.png',:size => "180x36",:id => "title"), battle_data_path %></li>
       <% end %>
     </ul>
 </div>

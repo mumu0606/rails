@@ -3,32 +3,54 @@
 <head>
   <title>ポケモン対戦支援サイト（仮）</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/application.css" rel="stylesheet">
+
+  <!-- ログイン管理 -->
+  <% if current_user.nil? %>
+    サインイン
+  <% else %>
+    Logged in as <%= current_user.username %>
+    <%= link_to "Log Out", destroy_user_session_path(:authenticity_token => form_authenticity_token()),:method => :delete %>
+  <% end %>
+
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <link href="css/template.css" rel="stylesheet">
 </head>
-<body bgcolor="blue">
-<%= render 'layouts/top' %>
+<body class="nav-md">
+  <%= render 'layouts/top' %>
+  <div class="container body">
     <% if notice %>
       <p class="alert alert-info"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-info"><%= alert %></p>
     <% end %>
-    <div class="container">
+    <div class="main_container">
       <div class="row">
+        <!--メニューここから-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+
+            <%= render 'layouts/sidebar' %>
+          </div>
+        </div>
+        <!--メニューここまで-->
+
+        <div class="top_nav">
+          <div class="nav_menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "ログアウト", destroy_user_session_path %></li>
+            </ul>
+          </div>
+        </div>
+
         <!--パーティー登録ここから-->
-        <div class="col-lg-10">
+        <div class="right_col" role="main">
           <%= yield %>
         </div>
         <!--パーティ登録ここまで-->
-        <!--メニューここから-->
-        <div class="col-lg-2">
-          <%= render 'layouts/sidebar' %>
-        </div>
-        <!--メニューここまで-->
       </div>
+    </div>
+  </div>
 </body>
 </html>
