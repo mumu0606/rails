@@ -1,6 +1,6 @@
 require 'matrix'
 
-class Data < ActiveRecord::Base
+class Datum < ActiveRecord::Base
   belongs_to :pokemon, :primary_key => "poke_id",:foreign_key => "poke_id"
   serialize :party_member
   serialize :item
@@ -152,7 +152,7 @@ class Data < ActiveRecord::Base
 
 
   #パーティの情報つっこんで，メンバー全員のdataを作成
-  def self.make_data(detailed_party,party_id)
+  def self.get_data_from_party_info(detailed_party,party_id)
     party_id.each_with_index do |poke_id,i|
       #自身以外のメンツのidを格納した配列を作成
       member_ids = party_id.slice(0..i) + party_id.slice(i..PARTY_SIZE)

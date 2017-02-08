@@ -1,24 +1,44 @@
 Rails.application.routes.draw do
-  root "page#title"
-  post "/" => "page#title"
-  resources :page do
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  #ログアウトルーティング
+  root "top_page#index"
+  #post "/" => "top_page"
+
+  resources :login_page do
     collection do
-      get :autocomplete_pokemon_name
-      get :autocomplete_item_name
-      get :autocomplete_pokemon_name
-      get :autocomplete_move_name
-      get :title
-      get :login
-      get :register
-      get :analysis
-      get :rate_data
-      get :battle_data
-      post :register
     end
   end
 
-  resources :chat do
+  resources :top_page do
     collection do
+    end
+  end
+
+  resources :art_works do
+  end
+
+  resources :register do
+    collection do
+    end
+  end
+
+  resources :analysis do
+    collection do
+      get 'index'
+      post 'index'
+      get :autocomplete_pokemon_name
+    end
+  end
+
+  resources :rate_data do
+    collection do
+    end
+  end
+
+  resources :battle_data do
+    collection do
+      get 'weekly_kp_ranking'
+      post 'weekly_kp_ranking'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

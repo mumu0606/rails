@@ -1,8 +1,12 @@
 #coding:utf-8
 class AnalysisController < ApplicationController
+  autocomplete :pokemon, :name
   layout "mylayout"
 
   PARTY_SIZE = 6
+  NO_MOVE_ID = 606 #技なしのid
+  NO_ITEM_ID = 0   #持ち物なしのid
+
   def index
     @result_hash = {}
     if params[:party_member]
@@ -17,7 +21,11 @@ class AnalysisController < ApplicationController
   def get_kp_hash(input_party_ids)
     input_party_ids.each_with_index do |input_poke_id,i|
       #対象ポケモンと一緒に手持ちに入れられているポケモン
-      input_poke_partner_ids = input_party_ids.slice(0..i) + input_party_ids.slice(i..PARTY_SIZE)
+      if i != 0
+        input_poke_partner_ids = input_party_ids.slice(0..i - 1) + input_party_ids.slice(i + 1..PARTY_SIZE)
+      else
+        input_poke_partner_ids = input_party_ids.slice(1..PARTY_SIZE)
+      end
       #対象ポケモンのinfoデータを全取得
       input_poke_infos = PokemonInfo.where(pokemon_id:input_poke_id)
 
@@ -62,7 +70,8 @@ class AnalysisController < ApplicationController
     end
 
     #予想される持ち物
-    prob_item_id = item_prob_hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }.first.first
+    sorted_item_prob_arr = item_prob_hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }
+    prob_item_id = sorted_item_prob_arr.first.present? ? sorted_item_prob_arr.first.first : NO_ITEM_ID
 
     #持ち物と技の共起度で技の予測値を更新
     move_prob_hash.each_key do |move_id|
@@ -70,10 +79,13 @@ class AnalysisController < ApplicationController
       cooccur = move_item.present? ? move_item.first["cooccur"] : 0
       move_prob_hash[move_id] += cooccur
     end
-    prob_move1_id = move_prob_hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }[0].first
-    prob_move2_id = move_prob_hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }[1].first
-    prob_move3_id = move_prob_hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }[2].first
-    prob_move4_id = move_prob_hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }[3].first
+
+    #技候補がない場合は"-"と表示するのでNO_MOVE_IDを代入
+    sorted_move_prob_arr = move_prob_hash.sort {|(k1, v1), (k2, v2)| v2 <=> v1 }
+    prob_move1_id = sorted_move_prob_arr[0].present? ? sorted_move_prob_arr[0].first : NO_MOVE_ID
+    prob_move2_id = sorted_move_prob_arr[1].present? ? sorted_move_prob_arr[1].first : NO_MOVE_ID
+    prob_move3_id = sorted_move_prob_arr[2].present? ? sorted_move_prob_arr[2].first : NO_MOVE_ID
+    prob_move4_id = sorted_move_prob_arr[3].present? ? sorted_move_prob_arr[3].first : NO_MOVE_ID
 
     result_hash["item"] = Item.find(prob_item_id)["name"]
     result_hash["move1"] = Move.find(prob_move1_id)["name"]

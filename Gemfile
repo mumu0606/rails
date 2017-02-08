@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+#gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -42,6 +42,14 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  #pry関連
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+end
+
+
 #bootstrap material
 gem 'bootstrap3-rails'
 gem 'bootstrap-material-design'
@@ -50,6 +58,14 @@ gem 'bootstrap-material-design'
 gem 'jquery-ui-rails'
 gem 'rails4-autocomplete'
 gem 'rails3-jquery-autocomplete'
-
-end
+#複合キーの実現
+gem 'composite_primary_keys'
+#seed-fuの利用
+gem 'seed-fu'
+gem 'jquery-turbolinks'
+#deviseの導入
+gem 'devise'
+gem 'omniauth-twitter'
+#mysql
+gem 'mysql2'
 

@@ -1,5 +1,3 @@
-require 'em-websocket'
-
 class PageController < ApplicationController
   layout 'mylayout'
   autocomplete :pokemon,:name, :full => true
@@ -8,7 +6,7 @@ class PageController < ApplicationController
 
   PARTY_SIZE = 6
   POKEMON_ZUKAN_SIZE = 719
-  def login
+  def login_page
     datum = []
     #poke_idで表現されたパーティーの情報を格納する
     party_id = []
@@ -32,9 +30,13 @@ class PageController < ApplicationController
     party_id.each_with_index do |poke_id,i|
       @predicted_hash[params["name"][i]] = Datum.predict_itemove(poke_id,party_id)
     end
+    #ログインしていたらタイトル画面にリダイレクト
+    if user_signed_in?
+      redirect_to :controller => "page",:action => "title"
+    end
   end
 
-  def title
+  def top
   end
 
   def register
@@ -92,14 +94,5 @@ class PageController < ApplicationController
     #こちらの選出と相手の選出と勝敗を試合毎に表示
     #rowはs1,s2,s3,o1,o2,o3,result,created_at
     #1週間毎に出す
-  end
-
-  def ws_test_server
-    EM::WebSocket.start(host: "localhost",port:8080) do |ws_conn|
-    end
-  end
-
-  def we_test_client
-    pp "test"
   end
 end

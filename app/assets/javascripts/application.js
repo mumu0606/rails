@@ -12,11 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
 //= require bootstrap
 //= require bootstrap-material-design
 //= require jquery-ui
 //= require autocomplete-rails
-//= require websocket_rails/main
 

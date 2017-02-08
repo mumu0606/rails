@@ -4,53 +4,52 @@
   <title>ポケモン対戦支援サイト（仮）</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <!-- ログイン管理 -->
-  <% if current_user.nil? %>
-    サインイン
-  <% else %>
-    Logged in as <%= current_user.username %>
-    <%= link_to "Log Out", destroy_user_session_path(:authenticity_token => form_authenticity_token()),:method => :delete %>
-  <% end %>
-
   <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <link href="css/template.css" rel="stylesheet">
+  <link href="css/mydesign.css" rel="stylesheet">
 </head>
 <body class="nav-md">
-  <%= render 'layouts/top' %>
-  <div class="container body">
-    <% if notice %>
-      <p class="alert alert-info"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-info"><%= alert %></p>
-    <% end %>
-    <div class="main_container">
-      <div class="row">
-        <!--メニューここから-->
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
+<%= render 'layouts/top' %>
+    <div class="row">
+      <!--メニューここから-->
+<% if nil %>
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
 
-            <%= render 'layouts/sidebar' %>
-          </div>
+          <%= render 'layouts/sidebar' %>
         </div>
-        <!--メニューここまで-->
-
-        <div class="top_nav">
-          <div class="nav_menu">
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "ログアウト", destroy_user_session_path %></li>
-            </ul>
-          </div>
-        </div>
-
-        <!--パーティー登録ここから-->
-        <div class="right_col" role="main">
-          <%= yield %>
-        </div>
-        <!--パーティ登録ここまで-->
       </div>
+<% end %>
+      <!--メニューここまで-->
+
+      <div class="top_nav">
+        <div class="nav_menu">
+          <% if notice %>
+            <p class="alert alert-info"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+            <p class="alert alert-info"><%= alert %></p>
+          <% end %>
+<% if nil %>
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user.present? %>
+              <li><a href="javascript:void(0);">
+                <%= "UserName:#{current_user.username}" %>
+              </a></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path %></li>
+            <% else %>
+              <li><%= link_to "ログイン", user_omniauth_authorize_path(:twitter) %></li>
+            <% end %>
+          </ul>
+        </div>
+<% end %>
+      </div>
+
+      <!--パーティー登録ここから-->
+      <div class="col-md-9 left-col" role="main">
+        <%= yield %>
+      </div>
+      <!--パーティ登録ここまで-->
     </div>
-  </div>
 </body>
 </html>
