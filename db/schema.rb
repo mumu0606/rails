@@ -13,22 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150721032222) do
 
-  create_table "data", force: :cascade do |t|
-    t.integer  "pokemon_id", limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "poke_id",    limit: 4
-    t.integer  "p1",         limit: 4
-    t.integer  "p2",         limit: 4
-    t.integer  "p3",         limit: 4
-    t.integer  "p4",         limit: 4
-    t.integer  "p5",         limit: 4
-    t.integer  "m1",         limit: 4
-    t.integer  "m2",         limit: 4
-    t.integer  "m3",         limit: 4
-    t.integer  "m4",         limit: 4
-  end
-
   create_table "items", force: :cascade do |t|
     t.integer  "item_id",    limit: 4
     t.string   "name",       limit: 255
@@ -120,5 +104,4 @@ ActiveRecord::Schema.define(version: 20150721032222) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-  add_foreign_key "move_items", "moves", primary_key: "move_id"
 end

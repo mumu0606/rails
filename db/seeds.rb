@@ -1,4 +1,4 @@
-Dir.glob(File.join(Rails.root,'db','seed','*.rb')) do |file|
+Dir.glob(File.join(Rails.root, 'db', 'seed', 'pokedex', '*.rb')) do |file|
   begin
     load(file)
   rescue => e

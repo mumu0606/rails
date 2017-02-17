@@ -1,6 +1,6 @@
-URL_POKEMON = 'db/seed/poke_zukan.json'
+URL_POKEMON = 'db/seed/pokedex/pokedex.json'
 
-def insert_pokemon
+def insert_seed
   open(URL_POKEMON) do |f|
     Pokemon.transaction do
       while l = f.gets
@@ -11,4 +11,5 @@ def insert_pokemon
   end
 end
 
-#insert_pokemon
+#データを挿入するときはコメントを外す
+#insert_seed
