@@ -15,34 +15,42 @@ class AnalysisController < ApplicationController
     end
   end
 
-  #kp_hashを計算し，それを用いて各ポケモンのアイテム・技予測を行う
-  #kp_hash::
-  #{{pokemon_infos_id => kp},{},...}
-  def get_kp_hash(input_party_ids)
-    input_party_ids.each_with_index do |input_poke_id,i|
-      #対象ポケモンと一緒に手持ちに入れられているポケモン
-      if i != 0
-        input_poke_partner_ids = input_party_ids.slice(0..i - 1) + input_party_ids.slice(i + 1..PARTY_SIZE)
-      else
-        input_poke_partner_ids = input_party_ids.slice(1..PARTY_SIZE)
-      end
-      #対象ポケモンのinfoデータを全取得
-      input_poke_infos = PokemonInfo.where(pokemon_id:input_poke_id)
 
-      partner_kp_hash = {}
-      input_poke_infos.each do |input_poke_info|
-        partner_kp = 0
-        partner_kp += 1 if input_poke_partner_ids.include?(input_poke_info["partner1"])
-        partner_kp += 1 if input_poke_partner_ids.include?(input_poke_info["partner2"])
-        partner_kp += 1 if input_poke_partner_ids.include?(input_poke_info["partner3"])
-        partner_kp += 1 if input_poke_partner_ids.include?(input_poke_info["partner4"])
-        partner_kp += 1 if input_poke_partner_ids.include?(input_poke_info["partner5"])
-        partner_kp_hash[input_poke_info["id"]] = partner_kp
+private
+  #kp_hashを計算し，それを用いて各ポケモンのアイテム・技予測を行う
+  #ke_hash: 各pokemon_dataのidをキーにしてそのパーティに対してどれだけポケモンがかぶっているかの値をvalueとする
+  #member_id_arr: パーティーメンバーのidを格納した配列
+  def get_kp_hash(member_id_arr)
+    member_id_arr.each_with_index do |member_id,i|
+      #一緒に手持ちに入れられているポケモンのid配列を取得
+      partner_id_arr = except_at(member_id_arr, i)
+      pokemon_datum = PokemonData.where(pokemon_id:member_id)
+
+      #ポケモンデータに格納された各行の情報に対して一緒に手持ちに入れられているポケモンがどれだけかぶっているかを計算する
+      kp_hash = {}
+      pokemon_datum.each do |row|
+        kp = 0
+        kp += 1 if partner_id_arr.include?(row["partner1"])
+        kp += 1 if partner_id_arr.include?(row["partner2"])
+        kp += 1 if partner_id_arr.include?(row["partner3"])
+        kp += 1 if partner_id_arr.include?(row["partner4"])
+        kp += 1 if partner_id_arr.include?(row["partner5"])
+        kp_hash[row.id] = kp
       end
 
       input_poke_name = Pokemon.find(input_poke_id)["name"]
       @result_hash[input_poke_name] = predict_item_moves_on_kp(partner_kp_hash)
     end
+  end
+
+  #配列から特定のindex番目の要素を除いた配列を返す
+  def except_at(arr, index)
+    unless index == 0
+      excepted_arr = arr.slice(0..index-1) + arr.slice(index+1..-1)
+    else
+      excepted_arr = arr.slice(1..-1)
+    end
+    return excepted_arr
   end
 
   #how_to_calc_prob::
