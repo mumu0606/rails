@@ -69,3 +69,7 @@ gem 'omniauth-twitter'
 #mysql
 gem 'mysql2'
 
+group :production do
+  gem 'rails_12factor'
+end
+

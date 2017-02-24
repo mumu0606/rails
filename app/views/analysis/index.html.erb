@@ -43,11 +43,11 @@
               <% @result_hash.each do |poke_name,info_hash| %>
                 <tr>
                   <td><%= poke_name %></td>
-                  <td><%= info_hash["item"] %></td>
-                  <td><%= info_hash["move1"] %></td>
-                  <td><%= info_hash["move2"] %></td>
-                  <td><%= info_hash["move3"] %></td>
-                  <td><%= info_hash["move4"] %></td>
+                  <td><%= info_hash[:item] %></td>
+                  <td><%= info_hash[:move1] %></td>
+                  <td><%= info_hash[:move2] %></td>
+                  <td><%= info_hash[:move3] %></td>
+                  <td><%= info_hash[:move4] %></td>
                 </tr>
               <% end %>
             </tbody>

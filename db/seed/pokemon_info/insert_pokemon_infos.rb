@@ -1,17 +1,18 @@
-JSON_FILE_PATH = 'db/seed/party_infos.json'
-YAML_FILE_PATH = 'db/seed/party_infos.yaml'
+JSON_FILE_PATH = File.expand_path(File.dirname(__FILE__) + '/party_infos.json')
+YAML_FILE_PATH = File.expand_path(File.dirname(__FILE__) + '/party_infos.yaml')
+p JSON_FILE_PATH
 require 'json'
 require 'yaml'
 
 PARTY_SIZE = 6
 
 #パーティーメンバー（名前）からパーティーメンバー（id）情報に変換
-def translate_name_to_id(party_member_names)
+def translate_name2id(party_member_names)
   party_member_ids = []
   party_member_names.each do |poke_name|
     poke = Pokemon.where(name:poke_name).first
     if poke == nil
-      p "NameError:#{poke_name}" 
+      p "NameError:#{poke_name}"
       break
     else
       party_member_ids.push(poke["poke_id"])
@@ -21,7 +22,7 @@ def translate_name_to_id(party_member_names)
 end
 
 #パーティーの情報からパーティ内の各ポケモンのpokemon_infoを作成
-def get_pokemon_info_from_party_info(party_member_ids,party_member_infos)
+def get_pokemon_info_from_party_info(party_member_ids, party_member_infos)
   party_member_ids.each_with_index do |poke_id,i|
     poke_name = Pokemon.where(poke_id:poke_id).first["name"]
 
@@ -76,30 +77,13 @@ def update_cooccur(pokemon_info)
     end
 end
 
-=begin
-def get_pokemon_infos
-  partys = open(JSON_FILE_PATH) do |io|
-    JSON.load(io)
-  end
-  partys.each do |party|
-    party_member_names = party["party_member_names"]
-    party_member_infos = party["party_member_infos"]
-    p party_member_names
-
-    #id形式のパーティ情報
-    party_member_ids = translate_name_to_id(party_member_names)
-    get_pokemon_info_from_party_info(party_member_ids,party_member_infos)
-  end
-end
-=end
-
 def get_pokemon_infos
   File.open(YAML_FILE_PATH) do |io|
     YAML.load_documents(io) do |party|
       party_member_names = party.keys
       party_member_infos = party
 
-      party_member_ids = translate_name_to_id(party_member_names)
+      party_member_ids = translate_name2id(party_member_names)
       get_pokemon_info_from_party_info(party_member_ids,party_member_infos)
     end
   end

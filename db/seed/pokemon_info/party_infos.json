@@ -1,5 +1,5 @@
 [{
-  "simple_party": [
+  "party_member_names": [
     "サーナイト",
     "スイクン",
     "スピアー",
@@ -7,7 +7,7 @@
     "バンギラス",
     "霊獣ランドロス"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "サーナイト",
       "item": "サーナイトナイト",
@@ -71,7 +71,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ウォッシュロトム",
     "バシャーモ",
     "ガルーラ",
@@ -79,7 +79,7 @@
     "クレセリア",
     "リザードン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ウォッシュロトム",
       "item": "ひかりのねんど",
@@ -143,7 +143,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "カバルドン",
     "ガブリアス",
     "ヒードラン",
@@ -151,7 +151,7 @@
     "ハッサム",
     "ヘラクロス"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "カバルドン",
       "item": "ゴツゴツメット",
@@ -215,7 +215,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "クレッフィ",
     "メタモン",
     "スターミー",
@@ -223,7 +223,7 @@
     "バンギラス",
     "ガブリアス"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "クレッフィ",
       "item": "たべのこし",
@@ -287,7 +287,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ラグラージ",
     "カイリュー",
     "ハッサム",
@@ -295,7 +295,7 @@
     "化身ボルトロス",
     "ゲンガー"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ラグラージ",
       "item": "ゴツゴツメット",
@@ -359,7 +359,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ガブリアス",
     "ガルーラ",
     "クレセリア",
@@ -367,7 +367,7 @@
     "マリルリ",
     "フシギバナ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ガブリアス",
       "item": "こだわりスカーフ",
@@ -431,7 +431,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "バンギラス",
     "ドリュウズ",
     "エルフーン",
@@ -439,7 +439,7 @@
     "霊獣ボルトロス",
     "スイクン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "バンギラス",
       "item": "バンギラスナイト",
@@ -503,7 +503,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "リザードン",
     "クレセリア",
     "ガブリアス",
@@ -511,7 +511,7 @@
     "ガルーラ",
     "マリルリ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "リザードン",
       "item": "リザードナイトX",
@@ -575,7 +575,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ゲッコウガ",
     "エルレイド",
     "クレセリア",
@@ -583,7 +583,7 @@
     "霊獣ランドロス",
     "ボーマンダ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ゲッコウガ",
       "item": "いのちのたま",
@@ -647,7 +647,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ファイアロー",
     "ゲンガー",
     "マンムー",
@@ -655,7 +655,7 @@
     "ガブリアス",
     "ヒードラン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ファイアロー",
       "item": "ゴツゴツメット",
@@ -719,7 +719,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ゲンガー",
     "マリルリ",
     "サンダー",
@@ -727,7 +727,7 @@
     "マンムー",
     "ウルガモス"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ゲンガー",
       "item": "ゲンガナイト",
@@ -791,7 +791,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "フシギバナ",
     "カイリュー",
     "クレセリア",
@@ -799,7 +799,7 @@
     "化身ボルトロス",
     "ローブシン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "フシギバナ",
       "item": "フシギバナイト",
@@ -863,7 +863,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "化身ボルトロス",
     "ガブリアス",
     "クチート",
@@ -871,7 +871,7 @@
     "キノガッサ",
     "スイクン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "化身ボルトロス",
       "item": "オボンのみ",
@@ -935,7 +935,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "エムリット",
     "クレッフィ",
     "バンギラス",
@@ -943,7 +943,7 @@
     "ウルガモス",
     "ボーマンダ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "エムリット",
       "item": "こだわりスカーフ",
@@ -1007,7 +1007,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ドンファン",
     "メタグロス",
     "カイロス",
@@ -1015,7 +1015,7 @@
     "マリルリ",
     "オニゴーリ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ドンファン",
       "item": "ラムのみ",
@@ -1079,7 +1079,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ライボルト",
     "霊獣ランドロス",
     "クレセリア",
@@ -1087,7 +1087,7 @@
     "キノガッサ",
     "ゲンガー"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ライボルト",
       "item": "ライボルトナイト",
@@ -1151,7 +1151,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ボーマンダ",
     "ローブシン",
     "クレセリア",
@@ -1159,7 +1159,7 @@
     "ニンフィア",
     "サンダー"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ボーマンダ",
       "item": "ボーマンダナイト",
@@ -1223,7 +1223,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ボーマンダ",
     "クレッフィ",
     "リザードン",
@@ -1231,7 +1231,7 @@
     "サンダー",
     "ポリゴン２"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ボーマンダ",
       "item": "ボーマンダナイト",
@@ -1295,7 +1295,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ユキノオー",
     "ガブリアス",
     "サンダー",
@@ -1303,7 +1303,7 @@
     "ヒードラン",
     "トゲキッス"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ユキノオー",
       "item": "ユキノオナイト",
@@ -1367,7 +1367,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ガルーラ",
     "ガブリアス",
     "スイクン",
@@ -1375,7 +1375,7 @@
     "ボーマンダ",
     "ナットレイ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ガルーラ",
       "item": "ガルーラナイト",
@@ -1439,7 +1439,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "カバルドン",
     "ラッキー",
     "ボーマンダ",
@@ -1447,7 +1447,7 @@
     "ピクシー",
     "ゲンガー"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "カバルドン",
       "item": "ゴツゴツメット",
@@ -1511,7 +1511,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ミミロップ",
     "カバルドン",
     "チルタリス",
@@ -1519,7 +1519,7 @@
     "ギルガルド",
     "サンダー"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ミミロップ",
       "item": "ミミロップナイト",
@@ -1583,7 +1583,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ガブリアス",
     "ボーマンダ",
     "ウルガモス",
@@ -1591,7 +1591,7 @@
     "キノガッサ",
     "スイクン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ガブリアス",
       "item": "きあいのタスキ",
@@ -1655,7 +1655,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ガルーラ",
     "サーナイト",
     "化身ボルトロス",
@@ -1663,7 +1663,7 @@
     "ナットレイ",
     "マリルリ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ガルーラ",
       "item": "ガルーラナイト",
@@ -1727,7 +1727,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "クレッフィ",
     "ペラップ",
     "グライオン",
@@ -1735,7 +1735,7 @@
     "ゲンガー",
     "クレセリア"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "クレッフィ",
       "item": "たべのこし",
@@ -1799,7 +1799,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ラグラージ",
     "バシャーモ",
     "サザンドラ",
@@ -1807,7 +1807,7 @@
     "化身ボルトロス",
     "ニンフィア"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ラグラージ",
       "item": "ラグラージナイト",
@@ -1871,7 +1871,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "バシャーモ",
     "サンダー",
     "ナットレイ",
@@ -1879,7 +1879,7 @@
     "バンギラス",
     "ガマゲロゲ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "バシャーモ",
       "item": "いのちのたま",
@@ -1943,7 +1943,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ガルーラ",
     "霊獣ランドロス",
     "キノガッサ",
@@ -1951,7 +1951,7 @@
     "ヒードラン",
     "サーナイト"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ガルーラ",
       "item": "ガルーラナイト",
@@ -2015,7 +2015,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "チルタリス",
     "グライオン",
     "ポリゴン２",
@@ -2023,7 +2023,7 @@
     "ハピナス",
     "ナットレイ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "チルタリス",
       "item": "チルタリスナイト",
@@ -2087,7 +2087,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ラティオス",
     "ラティアス",
     "バシャーモ",
@@ -2095,7 +2095,7 @@
     "ハッサム",
     "ガルーラ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ラティオス",
       "item": "ひかりのねんど",
@@ -2159,7 +2159,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "クチート",
     "クレセリア",
     "カバルドン",
@@ -2167,7 +2167,7 @@
     "ウルガモス",
     "ボーマンダ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "クチート",
       "item": "クチートナイト",
@@ -2231,7 +2231,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ラティアス",
     "化身ランドロス",
     "ポリゴン２",
@@ -2239,7 +2239,7 @@
     "ギャラドス",
     "キノガッサ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ラティアス",
       "item": "ラティアスナイト",
@@ -2303,7 +2303,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ガルーラ",
     "ゲンガー",
     "クレセリア",
@@ -2311,7 +2311,7 @@
     "クレッフィ",
     "ボーマンダ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ガルーラ",
       "item": "ガルーラナイト",
@@ -2375,7 +2375,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ラティオス",
     "バシャーモ",
     "ボーマンダ",
@@ -2383,7 +2383,7 @@
     "化身ボルトロス",
     "ガルーラ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ラティオス",
       "item": "ひかりのねんど",
@@ -2447,7 +2447,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "アグノム",
     "ボーマンダ",
     "キリキザン",
@@ -2455,7 +2455,7 @@
     "キノガッサ",
     "ギルガルド"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "アグノム",
       "item": "たつじんのおび",
@@ -2519,7 +2519,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "霊獣ランドロス",
     "ボーマンダ",
     "シャワーズ",
@@ -2527,7 +2527,7 @@
     "モロバレル",
     "ガルーラ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "霊獣ランドロス",
       "item": "とつげきチョッキ",
@@ -2591,7 +2591,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "バクーダ",
     "トゲキッス",
     "ヤドラン",
@@ -2599,7 +2599,7 @@
     "サザンドラ",
     "ギルガルド"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "バクーダ",
       "item": "バクーダナイト",
@@ -2663,7 +2663,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "バシャーモ",
     "ドリュウズ",
     "ウォッシュロトム",
@@ -2671,7 +2671,7 @@
     "クレセリア",
     "ゲンガー"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "バシャーモ",
       "item": "バシャーモナイト",
@@ -2735,7 +2735,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ガルーラ",
     "バシャーモ",
     "サーナイト",
@@ -2743,7 +2743,7 @@
     "霊獣ランドロス",
     "ギルガルド"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ガルーラ",
       "item": "ガルーラナイト",
@@ -2807,7 +2807,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "化身ボルトロス",
     "霊獣ランドロス",
     "ガルーラ",
@@ -2815,7 +2815,7 @@
     "スイクン",
     "クレセリア"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "化身ボルトロス",
       "item": "いのちのたま",
@@ -2879,7 +2879,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ヤミラミ",
     "ドーブル",
     "ボーマンダ",
@@ -2887,7 +2887,7 @@
     "ギルガルド",
     "ポリゴン２"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ヤミラミ",
       "item": "ロゼルのみ",
@@ -2951,7 +2951,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "サーナイト",
     "バシャーモ",
     "ガブリアス",
@@ -2959,7 +2959,7 @@
     "サンダー",
     "スイクン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "サーナイト",
       "item": "サーナイトナイト",
@@ -3023,7 +3023,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "霊獣ランドロス",
     "サンダー",
     "シャワーズ",
@@ -3031,7 +3031,7 @@
     "モロバレル",
     "ガルーラ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "霊獣ランドロス",
       "item": "とつげきチョッキ",
@@ -3095,7 +3095,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "チルタリス",
     "バンギラス",
     "ドリュウズ",
@@ -3103,7 +3103,7 @@
     "ソーナンス",
     "サマヨール"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "チルタリス",
       "item": "チルタリスナイト",
@@ -3167,7 +3167,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ウルガモス",
     "ガルーラ",
     "クレセリア",
@@ -3175,7 +3175,7 @@
     "ギルガルド",
     "スイクン"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ウルガモス",
       "item": "ラムのみ",
@@ -3239,7 +3239,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "化身ボルトロス",
     "マンムー",
     "クレッフィ",
@@ -3247,7 +3247,7 @@
     "ボーマンダ",
     "ラッキー"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "化身ボルトロス",
       "item": "オボンのみ",
@@ -3311,7 +3311,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ラグラージ",
     "ボーマンダ",
     "マンムー",
@@ -3319,7 +3319,7 @@
     "ジャローダ",
     "バンギラス"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ラグラージ",
       "item": "オボンのみ",
@@ -3383,7 +3383,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "リザードン",
     "カバルドン",
     "キノガッサ",
@@ -3391,7 +3391,7 @@
     "スイクン",
     "ギルガルド"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "リザードン",
       "item": "リザードナイトX",
@@ -3455,7 +3455,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "バンギラス",
     "エアームド",
     "ラッキー",
@@ -3463,7 +3463,7 @@
     "ヤドラン",
     "ハッサム"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "バンギラス",
       "item": "ラムのみ",
@@ -3527,7 +3527,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ライボルト",
     "霊獣ランドロス",
     "クレセリア",
@@ -3535,7 +3535,7 @@
     "キノガッサ",
     "ガルーラ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ライボルト",
       "item": "ライボルトナイト",
@@ -3599,7 +3599,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ゲンガー",
     "サンダー",
     "ヒードラン",
@@ -3607,7 +3607,7 @@
     "霊獣ランドロス",
     "ゲッコウガ"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ゲンガー",
       "item": "ゲンガナイト",
@@ -3671,7 +3671,7 @@
   ]
 },
 {
-  "simple_party": [
+  "party_member_names": [
     "ゲンガー",
     "グライオン",
     "ポリゴン２",
@@ -3679,7 +3679,7 @@
     "ハピナス",
     "モロバレル"
   ],
-  "detailed_party": [
+  "party_member_infos": [
     {
       "name": "ゲンガー",
       "item": "ゲンガナイト",

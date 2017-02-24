@@ -1,4 +1,4 @@
-POKE_ITEM_URL = 'db/seed/poke_item.json'
+POKE_ITEM_URL = 'db/seed/item/poke_item.json'
 
 def insert_item
   open(POKE_ITEM_URL) do |f|
@@ -11,4 +11,4 @@ def insert_item
   end
 end
 
-#insert_item
+insert_item
