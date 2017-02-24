@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore bundler gems.
+vendor/bundle
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -16,8 +19,15 @@
 !/log/.keep
 /tmp
 
-.DS_Store
-
 /public/sytem
 /public/assets
 /public/images
+
+#Ignore other unneeded files.
+dpc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
