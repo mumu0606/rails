@@ -13,21 +13,27 @@ class AnalysisController < ApplicationController
     # * @return
     #
     def index
-        ary_input_names = params[:party_member]
-        if ary_input_names.present?
-            ary_input_names.each do |input_name|
-                # nil、もしくは空文字は処理しない
-                if input_name.blank?
-                    next
-                end
+      @result_hash = {}
+        ary_party_member_names = []
 
-                # 不正な名前も処理しない
-                # [should] libにファイルを用意してSQLを叩かないべきか？それかcacheを利用するか
-                # [should] 文言は別ファイルで定数に
-                result = Pokemon.find_by(name: input_name)
-                if result.nil?
-                    @notice = "正確なポケモン名を入力してください"
-                end
+        ary_input_names = params[:party_member]
+        if ary_input_names.nil?
+            @notice = "ポケモン名を入力してください"
+            return
+        end
+        ary_input_names.each do |input_name|
+            # nil、もしくは空文字は処理しない
+            if input_name.blank?
+                next
+            end
+
+            # 不正な名前も処理しない
+            # [should] libにファイルを用意してSQLを叩かないべきか？それかcacheを利用するか
+            # [should] 文言は別ファイルで定数に
+            result = Pokemon.find_by(name: input_name)
+            if result.nil?
+                @notice = "正確なポケモン名を入力してください"
+                return
             end
         end
     end
